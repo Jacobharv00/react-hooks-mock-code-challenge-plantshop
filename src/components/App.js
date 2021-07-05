@@ -6,6 +6,7 @@ function App() {
 
   const [plants, setPlants] = useState([])
 
+  // Get Request
   useEffect(() => {
     fetch('http://localhost:6001/plants')
     .then(resp => resp.json())

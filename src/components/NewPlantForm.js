@@ -5,16 +5,15 @@ function NewPlantForm({ handleNewPlant }) {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState('')
 
+  // Post Request
   function handleSubmit(e){
     e.preventDefault()
-
     const newPlantObj = {
       name,
       image,
       price
     }
-
-  fetch('http://localhost:6001/plants', {
+    fetch('http://localhost:6001/plants', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
